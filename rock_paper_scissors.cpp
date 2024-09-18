@@ -13,6 +13,7 @@ void sleep(int seconds) {
 //fancy
 enum symbols{rock, paper, scissors};
 
+//parent player class
 class player {
 
 protected:
@@ -69,6 +70,7 @@ static void play(player& player1, player& player2) {
 
     sleep(1);
 
+    //player1 choice
     std::cout << player1.name << "'s choice:\n\n";
     player1.choose();
 
@@ -76,6 +78,7 @@ static void play(player& player1, player& player2) {
 
     std::cout << "\n\n\n";
 
+    //player2 choice
     std::cout << player2.name << "'s choice:\n\n";
     player2.choose();
 
@@ -83,12 +86,14 @@ static void play(player& player1, player& player2) {
 
     std::cout << "\n\n\n";
 
+    //compares and spews results
     compare(player1, player2);
 
     sleep(1);
 
     std::cout << "\n\n\n";
 
+    //scores
     std::cout << "scores: \n" << player1.name << ": " << player1.score << "\n" << player2.name << ": " << player2.score << "\n";
 
 
